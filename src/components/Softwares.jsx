@@ -1,8 +1,0 @@
-
-export function Softwares() {
-  return (
-    <>
-      
-    </>
-  );
-}
