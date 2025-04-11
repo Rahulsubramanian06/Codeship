@@ -51,11 +51,31 @@
     width: 95%;
   }
 /* what we do section */
-.discovery{
-    background-color: #49499D;
-}
+
 :hover.hover_card_effect{
     transform: rotate(-3deg);
+    background-color: #49499D;
+    color: white;
+}
+:hover.hover_card_effect .hover_white{
+    color: white !important;
+}
+:hover.hover_card_effect .hover_d_none{
+    display: none ;
+    visibility: hidden ;
+}
+
+.hover_card_effect .hover_d_none {
+    display: block ;
+    visibility: visible ;
+}
+.d_hover_block{
+    display: none;
+    visibility: hidden;
+}
+:hover.hover_card_effect .d_hover_block{
+    display: block !important;
+    visibility: visible !important;
 }
 .discover_content{
     width: 95%;

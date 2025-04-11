@@ -4,10 +4,14 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 // what we do
-import magnifying_glass from "../assets/magnifying_glass.png";
+import magnifying_glass from "../assets/magnifying_glass.svg";
+import magnifying_glass_hover from "../assets/magnifying_glass_hover.png";
 import rocket from "../assets/rocket_launch.png";
+import rocket_hover from "../assets/rocket_launch_hover.svg";
 import bug from "../assets/bug.png";
 import projects from "../assets/projects.png";
+import bug_hover from "../assets/bug_hover.svg";
+import projects_hover from "../assets/projects_hover.svg";
 // services
 import laptop from "../assets/laptop.png";
 import app from "../assets/app.png";
@@ -128,13 +132,22 @@ export function Landing_page() {
               <div className="row gap-xxl-5 gap-4 justify-content-center">
                 <div className="col-md-5 col-12 discovery hover_card_effect shadow p-3 mb-5 border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={magnifying_glass} alt="" />
-                    <p className=" font_size_28 font_weight_500 text-white m-0 ps-3">
+                    <img
+                      src={magnifying_glass}
+                      alt=""
+                      className="hover_d_none"
+                    />
+                    <img
+                      src={magnifying_glass_hover}
+                      alt=""
+                      className="d_hover_block"
+                    />
+                    <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Discovery
                     </p>
                   </div>
                   <div className="discovery_content px-4 py-2">
-                    <p className="text-white font_size_18 font_weight_400">
+                    <p className="font_size_18 font_weight_400">
                       Gain valuable insights and define the scope
                       throughcomprehensive analysis, research,and feasibility
                       assessments. Ourexpert team collaborates with youensuring
@@ -143,15 +156,16 @@ export function Landing_page() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-5 col-12 hover_card_effect shadow p-3 mb-5 bg-white border_radius_25 py-3">
+                <div className="col-md-5 col-12 hover_card_effect shadow p-3 mb-5 border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={rocket} alt="" />
-                    <p className=" font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
+                    <img src={rocket} alt="" className="hover_d_none"/>
+                    <img src={rocket_hover} alt="" className="d_hover_block"/>
+                    <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Development
                     </p>
                   </div>
                   <div className="discovery_content px-4 py-2">
-                    <p className="font_color_black font_size_18 font_weight_400">
+                    <p className="font_size_18 font_weight_400">
                       Leverage our team’s specialized full-stack expertise in
                       software development to bring your product vision to life.
                       We are dedicated to delivering solutions that meet the
@@ -160,15 +174,16 @@ export function Landing_page() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-5 col-12 shadow p-3 mb-5 hover_card_effect bg-white border_radius_25 py-3">
+                <div className="col-md-5 col-12 shadow p-3 mb-5 hover_card_effect border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={bug} alt="" />
-                    <p className=" font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
+                    <img src={bug} alt="" className="hover_d_none"/>
+                    <img src={bug_hover} alt="" className="d_hover_block"/>
+                    <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Testing
                     </p>
                   </div>
                   <div className="discovery_content px-4 py-2">
-                    <p className="font_color_black font_size_18 font_weight_400">
+                    <p className="font_size_18 font_weight_400">
                       Ensure the quality and reliability of your software
                       through our comprehensive testing services. Our team
                       performs a wide range of testing activities such as
@@ -177,15 +192,16 @@ export function Landing_page() {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-5 col-12 shadow p-3 mb-5 bg-white hover_card_effect border_radius_25 py-3">
+                <div className="col-md-5 col-12 shadow p-3 mb-5 hover_card_effect border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={projects} alt="" />
-                    <p className=" font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
+                    <img src={projects} alt="" className="hover_d_none"/>
+                    <img src={projects_hover} alt="" className="d_hover_block"/>
+                    <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Project Management
                     </p>
                   </div>
                   <div className="discovery_content px-4 py-2">
-                    <p className="font_color_black font_size_18 font_weight_400">
+                    <p className="font_size_18 font_weight_400">
                       Seamlessly execute your software development project with
                       the help of our experienced project managers. We tailor
                       fit the methodology to your needs.
