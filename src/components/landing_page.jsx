@@ -2,7 +2,7 @@ import logo from "../assets/girl_landing_section.png";
 import "swiper/css";
 // swiper below landing section
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Mousewheel } from "swiper/modules";
 // what we do
 import magnifying_glass from "../assets/magnifying_glass.svg";
 import magnifying_glass_hover from "../assets/magnifying_glass_hover.png";
@@ -151,22 +151,22 @@ export function Landing_page() {
                       Gain valuable insights and define the scope
                       throughcomprehensive analysis, research,and feasibility
                       assessments. Ourexpert team collaborates with youensuring
-                      a clear understanding ofyour project’s objectives
+                      a clear understanding ofyour project's objectives
                       andrequirements.
                     </p>
                   </div>
                 </div>
                 <div className="col-md-5 col-12 hover_card_effect shadow p-3 mb-5 border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={rocket} alt="" className="hover_d_none"/>
-                    <img src={rocket_hover} alt="" className="d_hover_block"/>
+                    <img src={rocket} alt="" className="hover_d_none" />
+                    <img src={rocket_hover} alt="" className="d_hover_block" />
                     <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Development
                     </p>
                   </div>
                   <div className="discovery_content px-4 py-2">
                     <p className="font_size_18 font_weight_400">
-                      Leverage our team’s specialized full-stack expertise in
+                      Leverage our team's specialized full-stack expertise in
                       software development to bring your product vision to life.
                       We are dedicated to delivering solutions that meet the
                       highest coding standards, ensuring reliability,
@@ -176,8 +176,8 @@ export function Landing_page() {
                 </div>
                 <div className="col-md-5 col-12 shadow p-3 mb-5 hover_card_effect border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={bug} alt="" className="hover_d_none"/>
-                    <img src={bug_hover} alt="" className="d_hover_block"/>
+                    <img src={bug} alt="" className="hover_d_none" />
+                    <img src={bug_hover} alt="" className="d_hover_block" />
                     <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Testing
                     </p>
@@ -194,8 +194,12 @@ export function Landing_page() {
                 </div>
                 <div className="col-md-5 col-12 shadow p-3 mb-5 hover_card_effect border_radius_25 py-3">
                   <div className="d-flex align-items-center px-4 py-3">
-                    <img src={projects} alt="" className="hover_d_none"/>
-                    <img src={projects_hover} alt="" className="d_hover_block"/>
+                    <img src={projects} alt="" className="hover_d_none" />
+                    <img
+                      src={projects_hover}
+                      alt=""
+                      className="d_hover_block"
+                    />
                     <p className="hover_white font_size_28 font_weight_500 font_color_dark_blue m-0 ps-3">
                       Project Management
                     </p>
@@ -214,89 +218,119 @@ export function Landing_page() {
         </div>
       </div>
       {/* services */}
-      <div className="container py-5">
-        <div className="row justify-content-between">
-          <div className="col-xxl-5 col-xl-6 col-lg-6 text-center text-xxl-start">
-            <p className="font_size_20 font_weight_500 line_height_20">
-              How we can help you
-            </p>
-            <p className="font_size_65 font_weight_600 line_height_65">
-              Services
-              <br /> We Offer
-            </p>
-            <p className="font_size_24 font_weight_400">
-              We offer a comprehensive range of software development services
-              tailored to meet the unique needs of your business. A full-service
-              creative agency designing and building inventive digital
-              experiences across all platforms and brand touchpoints
-            </p>
-            <button className="gradient_background border-0 text-white px-4 py-2 rounded-pill">
-              All Services{" "}
-              <span>
-                <i className="fa-solid fa-arrow-right"></i>
-              </span>
-            </button>
-          </div>
-          <div className="col-xxl-5 col-xl-5 col-lg-5 mt-5 mt-xxl-0 me-5">
-            <Swiper className="mySwiper shadow p-3 mb-5 bg-white rounded-5">
-              <SwiperSlide>
-                <Services_card
-                  logo={laptop}
-                  title={"web Development"}
-                  subtitle={
-                    "Get a high-quality, responsive, and fully optimized website designed to elevate your business Our expert team ensures seamless functionality across all devices, enhancing user experience and driving results for your  brand."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Services_card
-                  logo={app}
-                  title={"App Development"}
-                  subtitle={
-                    "In today's mobile-first era, people are more focused on mobile devices than any other platform Our cutting-edge technology ensures seamless performance, user-friendly interfaces, and tailored features to meet your business needs."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Services_card
-                  logo={ui_ux}
-                  title={"Ui/Ux Design"}
-                  subtitle={
-                    "Combining creativity with technical expertise, we design digital experiences that meet today's user needs while anticipating tomorrow's challenges. Our forward-thinking approach ensures adaptable, future-ready solutions that evolve with the digital landscape."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Services_card
-                  logo={amc}
-                  title={"AMC"}
-                  subtitle={
-                    "Websites, applications, and tools need ongoing support to stay optimized and secure. We offer Annual Maintenance Contracts (AMC) to keep your business efficient and adaptable, ensuring proactive solutions, continuous improvements, and reliable year-round support."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Services_card
-                  logo={servers}
-                  title={"Servers & Hosting"}
-                  subtitle={
-                    "We provide specialized support for the procurement, setup, and maintenance of servers, ensuring the continuous, smooth operation of your online applications 24/7, allowing you to focus on growth while we handle the technical complexities."
-                  }
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Services_card
-                  logo={digital_marketing}
-                  title={"Digital Marketing"}
-                  subtitle={
-                    "Elevate your brand and connect with a wider audience through tailored digital marketing strategies. Harness the power of Facebook, Instagram, and AdWords to drive traffic, increase conversions, and build lasting customer relationships."
-                  }
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+      <div className="container position-sticky top-0 z-3 services_container_height py-5">
+        <div className="row">
+          <Swiper
+            className="mySwiper services_swiper_container px-4 py-5"
+            slidesPerView={2}
+            spaceBetween={80}
+            direction="horizontal"
+            mousewheel={{
+              releaseOnEdges: true
+            }}
+            modules={[Mousewheel]}
+            breakpoints={{
+              374: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+            }}
+          >
+            <SwiperSlide className="d-flex flex-row justify-content-between">
+              <div className=" text-center text-xxl-start">
+                <p className="font_size_20 font_weight_500 line_height_20">
+                  How we can help you
+                </p>
+                <p className="font_size_65 font_weight_600 line_height_65">
+                  Services
+                  <br /> We Offer
+                </p>
+                <p className="font_size_24 font_weight_400">
+                  We offer a comprehensive range of software development
+                  services tailored to meet the unique needs of your business. A
+                  full-service creative agency designing and building inventive
+                  digital experiences across all platforms and brand touchpoints
+                </p>
+                <button className="gradient_background border-0 text-white px-4 py-2 rounded-pill">
+                  All Services{" "}
+                  <span>
+                    <i className="fa-solid fa-arrow-right"></i>
+                  </span>
+                </button>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Services_card
+                logo={laptop}
+                title={"web Development"}
+                subtitle={
+                  "Get a high-quality, responsive, and fully optimized website designed to elevate your business Our expert team ensures seamless functionality across all devices, enhancing user experience and driving results for your  brand."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Services_card
+                logo={ui_ux}
+                title={"Ui/Ux Design"}
+                subtitle={
+                  "Combining creativity with technical expertise, we design digital experiences that meet today's user needs while anticipating tomorrow's challenges. Our forward-thinking approach ensures adaptable, future-ready solutions that evolve with the digital landscape."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Services_card
+                logo={amc}
+                title={"AMC"}
+                subtitle={
+                  "Websites, applications, and tools need ongoing support to stay optimized and secure. We offer Annual Maintenance Contracts (AMC) to keep your business efficient and adaptable, ensuring proactive solutions, continuous improvements, and reliable year-round support."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Services_card
+                logo={servers}
+                title={"Servers & Hosting"}
+                subtitle={
+                  "We provide specialized support for the procurement, setup, and maintenance of servers, ensuring the continuous, smooth operation of your online applications 24/7, allowing you to focus on growth while we handle the technical complexities."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Services_card
+                logo={digital_marketing}
+                title={"Digital Marketing"}
+                subtitle={
+                  "Elevate your brand and connect with a wider audience through tailored digital marketing strategies. Harness the power of Facebook, Instagram, and AdWords to drive traffic, increase conversions, and build lasting customer relationships."
+                }
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Services_card
+                logo={app}
+                title={"App Development"}
+                subtitle={
+                  "In today's mobile-first era, people are more focused on mobile devices than any other platform Our cutting-edge technology ensures seamless performance, user-friendly interfaces, and tailored features to meet your business needs."
+                }
+              />
+            </SwiperSlide>
+          </Swiper>
+          
         </div>
       </div>
+      
+      {/* empty plain black background */}
+                
+      <div className="position-relative z-1 empty_black_background">
+                  
+                  </div>
       {/* softwares */}
       <div className="container-fluid bg-black overflow-hidden">
         <div className="container py-5 position-relative">
@@ -406,7 +440,7 @@ export function Landing_page() {
                       Amazing tech stack in our pocket
                     </p>
                     <p className=" text-white text-center font_size_18 font_weight_400 bottom_content">
-                      Utilize our team’s specialized full-stack expertise in
+                      Utilize our team's specialized full-stack expertise in
                       software development to turn your product vision into
                       reality. We are committed to providing solutions that
                       adhere to the highest coding standards, ensuring

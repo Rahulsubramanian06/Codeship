@@ -54,6 +54,7 @@
 
 :hover.hover_card_effect{
     transform: rotate(-3deg);
+    transition: all .4s;
     background-color: #49499D;
     color: white;
 }
@@ -84,7 +85,72 @@
 .icon_wrapper{
     width: 80px;
     height: auto;
+    transition: transform 1s ease;
 }
+.services_card{
+height: 45vh;
+}
+
+/* logo animation */
+
+@keyframes slideright {
+    from{
+        transform: translateX(calc(100%));
+    }
+    to{
+        transform: translateX(calc(100% + 600%));
+    }
+}
+
+.icon_wrapper{
+    animation-name: slideright;
+    animation-duration: 3s;
+}
+
+/* .services_container_height:hover .icon_wrapper {
+    transform: translateX(calc(100% + 600%));
+}
+
+.services_container_height{
+    height: 100vh;
+}
+@media (max-width: 1400px) {
+    .services_swiper_container:hover .icon_wrapper {
+        transform: translateX(calc(100% + 400%));
+    }
+}
+
+@media (max-width: 1200px) {
+    .services_swiper_container:hover .icon_wrapper {
+        transform: translateX(calc(100% + 300%));
+    }
+}
+
+@media (max-width: 992px) {
+    .services_swiper_container:hover .icon_wrapper {
+        transform: translateX(calc(100% + 200%));
+    }
+}
+
+@media (max-width: 768px) {
+    .services_swiper_container:hover .icon_wrapper {
+        transform: translateX(calc(100% + 100%));
+    }
+    
+    .icon_wrapper {
+        width: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .services_swiper_container:hover .icon_wrapper {
+        transform: translateX(calc(100% + 450%));
+    }
+    
+    .icon_wrapper {
+        width: 40px;
+    }
+} */
 #services_swiper_container{
 width: 100%;
 height: 100%;
@@ -92,6 +158,11 @@ height: 100%;
 #services_swiper_slide{
 width: 100%;
 height: 100%;
+}
+
+.empty_black_background{
+    height: 100vh;
+    background-color: black;
 }
 /* software section */
 .gradient_background{
@@ -175,3 +246,4 @@ height: 100%;
         width: 50% !important;
     }
   }
+

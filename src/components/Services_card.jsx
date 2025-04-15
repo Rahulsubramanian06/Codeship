@@ -1,8 +1,8 @@
 export function Services_card({logo, title, subtitle}){
     return(
-        <div className="services_card p-3 d-flex justify-content-center align-items-start flex-column">
+        <div className="services_card d-flex justify-content-center align-items-start flex-column shadow p-5 bg-white rounded-5">
         <div className="icon_wrapper">
-          <img src={logo} className="object_contain" alt="logo" />
+          <img src={logo} className="object_contain card_logo" alt="logo" />
         </div>
         <div className="card_title font_size_58 font_weight_500">
           {title}
@@ -18,6 +18,3 @@ export function Services_card({logo, title, subtitle}){
       </div>
     );
 }
-
-
-
