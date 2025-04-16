@@ -12,7 +12,7 @@ export function Services_card({logo, title, subtitle}){
             {subtitle}
           </p>
         </div>
-        <button className="font_size_20 font_color_dark_blue bg-transparent border-0">
+        <button className="font_size_20 read_btn font_color_dark_blue bg-transparent border-0">
           Read More <i className="fa-solid fa-chevron-right fa-xs"></i>
         </button>
       </div>

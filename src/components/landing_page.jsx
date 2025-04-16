@@ -20,6 +20,11 @@ import amc from "../assets/amc.png";
 import servers from "../assets/servers.png";
 import digital_marketing from "../assets/digital_marketing.png";
 import { Services_card } from "../components/Services_card.jsx";
+// gsap
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 // tech_stack
 import { Tech_stack_img } from "./teck_stack_img.jsx";
 // sofwares
@@ -37,6 +42,22 @@ import twitter from "../assets/twitter.png";
 import insta from "../assets/insta.png";
 import linkedin from "../assets/linkedin.png";
 export function Landing_page() {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.to(".icon_wrapper", {
+      x: 600,
+      scrollTrigger: {
+        trigger: ".icon_wrapper",
+        start: "top 50%",
+        end: "top 40%",
+        markers: true,
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+
   return (
     <>
       <div className="container py-5">
@@ -218,33 +239,10 @@ export function Landing_page() {
         </div>
       </div>
       {/* services */}
-      <div className="container position-sticky top-0 z-3 services_container_height py-5">
-        <div className="row">
-          <Swiper
-            className="mySwiper services_swiper_container px-4 py-5"
-            slidesPerView={2}
-            spaceBetween={80}
-            direction="horizontal"
-            mousewheel={{
-              releaseOnEdges: true
-            }}
-            modules={[Mousewheel]}
-            breakpoints={{
-              374: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 2,
-                spaceBetween: 50,
-              },
-            }}
-          >
-            <SwiperSlide className="d-flex flex-row justify-content-between">
+      <div className="container services_container py-5">
+        <div className="row services_row flex-nowrap overflow-x-auto">
+          <div className="col-xxl-6">
+            <div className="d-flx flex-row justify-content-between">
               <div className=" text-center text-xxl-start">
                 <p className="font_size_20 font_weight_500 line_height_20">
                   How we can help you
@@ -266,8 +264,9 @@ export function Landing_page() {
                   </span>
                 </button>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            </div>
+            <div className="col-xxl-6">
               <Services_card
                 logo={laptop}
                 title={"web Development"}
@@ -275,8 +274,8 @@ export function Landing_page() {
                   "Get a high-quality, responsive, and fully optimized website designed to elevate your business Our expert team ensures seamless functionality across all devices, enhancing user experience and driving results for your  brand."
                 }
               />
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            <div className="col-xxl-6">
               <Services_card
                 logo={ui_ux}
                 title={"Ui/Ux Design"}
@@ -284,8 +283,8 @@ export function Landing_page() {
                   "Combining creativity with technical expertise, we design digital experiences that meet today's user needs while anticipating tomorrow's challenges. Our forward-thinking approach ensures adaptable, future-ready solutions that evolve with the digital landscape."
                 }
               />
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            <div>
               <Services_card
                 logo={amc}
                 title={"AMC"}
@@ -293,8 +292,8 @@ export function Landing_page() {
                   "Websites, applications, and tools need ongoing support to stay optimized and secure. We offer Annual Maintenance Contracts (AMC) to keep your business efficient and adaptable, ensuring proactive solutions, continuous improvements, and reliable year-round support."
                 }
               />
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            <div>
               <Services_card
                 logo={servers}
                 title={"Servers & Hosting"}
@@ -302,8 +301,8 @@ export function Landing_page() {
                   "We provide specialized support for the procurement, setup, and maintenance of servers, ensuring the continuous, smooth operation of your online applications 24/7, allowing you to focus on growth while we handle the technical complexities."
                 }
               />
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            <div>
               <Services_card
                 logo={digital_marketing}
                 title={"Digital Marketing"}
@@ -311,8 +310,8 @@ export function Landing_page() {
                   "Elevate your brand and connect with a wider audience through tailored digital marketing strategies. Harness the power of Facebook, Instagram, and AdWords to drive traffic, increase conversions, and build lasting customer relationships."
                 }
               />
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            <div>
               <Services_card
                 logo={app}
                 title={"App Development"}
@@ -320,17 +319,12 @@ export function Landing_page() {
                   "In today's mobile-first era, people are more focused on mobile devices than any other platform Our cutting-edge technology ensures seamless performance, user-friendly interfaces, and tailored features to meet your business needs."
                 }
               />
-            </SwiperSlide>
-          </Swiper>
-          
+            </div>
         </div>
       </div>
-      
+
       {/* empty plain black background */}
-                
-      <div className="position-relative z-1 empty_black_background">
-                  
-                  </div>
+      <div className="position-relative z-1 empty_black_background"></div>
       {/* softwares */}
       <div className="container-fluid bg-black overflow-hidden">
         <div className="container py-5 position-relative">
