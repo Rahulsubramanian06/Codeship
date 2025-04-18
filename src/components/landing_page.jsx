@@ -25,6 +25,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+//Animation
+import { useScrollAnimation } from "../components/animation.jsx";
 // tech_stack
 import { Tech_stack_img } from "./teck_stack_img.jsx";
 // sofwares
@@ -42,21 +44,7 @@ import twitter from "../assets/twitter.png";
 import insta from "../assets/insta.png";
 import linkedin from "../assets/linkedin.png";
 export function Landing_page() {
-  // Register ScrollTrigger plugin
-  gsap.registerPlugin(ScrollTrigger);
-
-  useGSAP(() => {
-    gsap.to(".icon_wrapper", {
-      x: 600,
-      scrollTrigger: {
-        trigger: ".icon_wrapper",
-        start: "top 50%",
-        end: "top 40%",
-        markers: true,
-        toggleActions: "play none none reverse",
-      },
-    });
-  });
+  useScrollAnimation();
 
   return (
     <>
@@ -137,7 +125,7 @@ export function Landing_page() {
         </div>
       </div>
       {/* What we do */}
-      <div className="container mt-5">
+      <div className="container what_we_do  mt-5">
         <div className="row">
           <div className="col-xxl-5 col-12 text-xxl-start text-center px-3">
             <p className="font_size_58 font_weight_600 line_height_54">
@@ -239,94 +227,104 @@ export function Landing_page() {
         </div>
       </div>
       {/* services */}
-      <div className="container services_container py-5">
-        <div className="row services_row flex-nowrap overflow-x-auto">
-          <div className="col-xxl-6">
-            <div className="d-flx flex-row justify-content-between">
-              <div className=" text-center text-xxl-start">
-                <p className="font_size_20 font_weight_500 line_height_20">
-                  How we can help you
-                </p>
-                <p className="font_size_65 font_weight_600 line_height_65">
-                  Services
-                  <br /> We Offer
-                </p>
-                <p className="font_size_24 font_weight_400">
-                  We offer a comprehensive range of software development
-                  services tailored to meet the unique needs of your business. A
-                  full-service creative agency designing and building inventive
-                  digital experiences across all platforms and brand touchpoints
-                </p>
-                <button className="gradient_background border-0 text-white px-4 py-2 rounded-pill">
-                  All Services{" "}
-                  <span>
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </span>
-                </button>
+      <div className="services_container pt-5">
+        <div className="services_wrapper">
+          <div className="services_row py-5">
+            <div className="d-flex fixed-top gap-5 col_wrapper">
+              <div className="px-5">
+                <div className="d-flx serv_content flex-row justify-content-between">
+                  <div className=" text-center text-xxl-start">
+                    <p className="font_size_20 font_weight_500 line_height_20">
+                      How we can help you
+                    </p>
+                    <p className="font_size_65 font_weight_600 line_height_65">
+                      Services
+                      <br /> We Offer
+                    </p>
+                    <p className="font_size_24 font_weight_400">
+                      We offer a comprehensive range of software development
+                      services tailored to meet the unique needs of your
+                      business. A full-service creative agency designing and
+                      building inventive digital experiences across all
+                      platforms and brand touchpoints
+                    </p>
+                    <button className="gradient_background border-0 text-white px-4 py-2 rounded-pill">
+                      All Services{" "}
+                      <span>
+                        <i className="fa-solid fa-arrow-right"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="individual_cards">
+                <Services_card
+                  className={"lap_icon"}
+                  logo={laptop}
+                  title={"web Development"}
+                  subtitle={
+                    "Get a high-quality, responsive, and fully optimized website designed to elevate your business Our expert team ensures seamless functionality across all devices, enhancing user experience and driving results for your  brand."
+                  }
+                />
+              </div>
+              <div className="individual_cards">
+                <Services_card
+                  className={"app_icon"}
+                  logo={app}
+                  title={"App Development"}
+                  subtitle={
+                    "In today's mobile-first era, people are more focused on mobile devices than any other platform Our cutting-edge technology ensures seamless performance, user-friendly interfaces, and tailored features to meet your business needs."
+                  }
+                />
+              </div>
+              <div className="individual_cards">
+                <Services_card
+                  className={"ui_icon"}
+                  logo={ui_ux}
+                  title={"Ui/Ux Design"}
+                  subtitle={
+                    "Combining creativity with technical expertise, we design digital experiences that meet today's user needs while anticipating tomorrow's challenges. Our forward-thinking approach ensures adaptable, future-ready solutions that evolve with the digital landscape."
+                  }
+                />
+              </div>
+              <div className="individual_cards">
+                <Services_card
+                  className={"amc_icon"}
+                  logo={amc}
+                  title={"AMC"}
+                  subtitle={
+                    "Websites, applications, and tools need ongoing support to stay optimized and secure. We offer Annual Maintenance Contracts (AMC) to keep your business efficient and adaptable, ensuring proactive solutions, continuous improvements, and reliable year-round support."
+                  }
+                />
+              </div>
+              <div className="individual_cards">
+                <Services_card
+                  className={"servers_icon"}
+                  logo={servers}
+                  title={"Servers & Hosting"}
+                  subtitle={
+                    "We provide specialized support for the procurement, setup, and maintenance of servers, ensuring the continuous, smooth operation of your online applications 24/7, allowing you to focus on growth while we handle the technical complexities."
+                  }
+                />
+              </div>
+              <div className="individual_cards">
+                <Services_card
+                  className={"digital_icon"}
+                  logo={digital_marketing}
+                  title={"Digital Marketing"}
+                  subtitle={
+                    "Elevate your brand and connect with a wider audience through tailored digital marketing strategies. Harness the power of Facebook, Instagram, and AdWords to drive traffic, increase conversions, and build lasting customer relationships."
+                  }
+                />
               </div>
             </div>
-            </div>
-            <div className="col-xxl-6">
-              <Services_card
-                logo={laptop}
-                title={"web Development"}
-                subtitle={
-                  "Get a high-quality, responsive, and fully optimized website designed to elevate your business Our expert team ensures seamless functionality across all devices, enhancing user experience and driving results for your  brand."
-                }
-              />
-            </div>
-            <div className="col-xxl-6">
-              <Services_card
-                logo={ui_ux}
-                title={"Ui/Ux Design"}
-                subtitle={
-                  "Combining creativity with technical expertise, we design digital experiences that meet today's user needs while anticipating tomorrow's challenges. Our forward-thinking approach ensures adaptable, future-ready solutions that evolve with the digital landscape."
-                }
-              />
-            </div>
-            <div>
-              <Services_card
-                logo={amc}
-                title={"AMC"}
-                subtitle={
-                  "Websites, applications, and tools need ongoing support to stay optimized and secure. We offer Annual Maintenance Contracts (AMC) to keep your business efficient and adaptable, ensuring proactive solutions, continuous improvements, and reliable year-round support."
-                }
-              />
-            </div>
-            <div>
-              <Services_card
-                logo={servers}
-                title={"Servers & Hosting"}
-                subtitle={
-                  "We provide specialized support for the procurement, setup, and maintenance of servers, ensuring the continuous, smooth operation of your online applications 24/7, allowing you to focus on growth while we handle the technical complexities."
-                }
-              />
-            </div>
-            <div>
-              <Services_card
-                logo={digital_marketing}
-                title={"Digital Marketing"}
-                subtitle={
-                  "Elevate your brand and connect with a wider audience through tailored digital marketing strategies. Harness the power of Facebook, Instagram, and AdWords to drive traffic, increase conversions, and build lasting customer relationships."
-                }
-              />
-            </div>
-            <div>
-              <Services_card
-                logo={app}
-                title={"App Development"}
-                subtitle={
-                  "In today's mobile-first era, people are more focused on mobile devices than any other platform Our cutting-edge technology ensures seamless performance, user-friendly interfaces, and tailored features to meet your business needs."
-                }
-              />
-            </div>
+          </div>
+          {/* empty plain black background */}
+          <div className="empty_black_background p-0 m-0"></div>
         </div>
       </div>
-
-      {/* empty plain black background */}
-      <div className="position-relative z-1 empty_black_background"></div>
       {/* softwares */}
-      <div className="container-fluid bg-black overflow-hidden">
+      <div className="container-fluid bg-black overflow-hidden py-5">
         <div className="container py-5 position-relative">
           <div className="row">
             <div className="col-xxl-3">
