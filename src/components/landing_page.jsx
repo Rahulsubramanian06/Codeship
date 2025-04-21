@@ -395,7 +395,7 @@ export function Landing_page() {
       </div>
       {/* tech stack */}
       <div className="container-fluid bg-black py-5">
-        <div className="container">
+        <div className="container py-5">
           <div className="first_row d-flex justify-content-center align-items-center gap-3">
             <Tech_stack_img />
             <Tech_stack_img />
