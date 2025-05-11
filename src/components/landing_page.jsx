@@ -20,11 +20,6 @@ import amc from "../assets/amc.png";
 import servers from "../assets/servers.png";
 import digital_marketing from "../assets/digital_marketing.png";
 import { Services_card } from "../components/Services_card.jsx";
-// gsap
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-
 //Animation
 import { useScrollAnimation } from "../components/animation.jsx";
 // tech_stack
@@ -232,7 +227,7 @@ export function Landing_page() {
           <div className="services_row py-5">
             <div className="d-flex fixed-top gap-5 col_wrapper">
               <div className="px-5">
-                <div className="d-flx serv_content flex-row justify-content-between">
+                <div className="d-flex serv_content flex-row justify-content-between">
                   <div className=" text-center text-xxl-start">
                     <p className="font_size_20 font_weight_500 line_height_20">
                       How we can help you
@@ -510,7 +505,7 @@ export function Landing_page() {
               <p className="text-white font_size_64 font_weight_600 text-start">
                 Soyvita <br /> Landing Page
               </p>
-              <div className="card_bottom_buttons d-flex gap-3">
+              <div className="card_bottom_buttons d-flex gap-1">
                 <button className="bg-white px-2 px-xl-4 py-1 rounded-pill border-0 font_size_16">
                   UX/UI
                 </button>
@@ -528,7 +523,7 @@ export function Landing_page() {
               <p className="text-white font_size_64 font_weight_600 text-start">
                 Project-2
               </p>
-              <div className="card_bottom_buttons d-flex gap-3">
+              <div className="card_bottom_buttons d-flex gap-1">
                 <button className="bg-white font_size_16 px-2 px-xl-4 py-1 rounded-pill border-0 font_size_16">
                   UX/UI
                 </button>
@@ -546,7 +541,7 @@ export function Landing_page() {
               <p className="text-white font_size_64 font_weight_600 text-start">
                 Project-3
               </p>
-              <div className="card_bottom_buttons d-flex gap-3">
+              <div className="card_bottom_buttons d-flex gap-1">
                 <button className="bg-white px-2 px-xl-4 py-1 rounded-pill border-0 font_size_16">
                   UX/UI
                 </button>
@@ -564,7 +559,7 @@ export function Landing_page() {
               <p className="text-white font_size_64 font_weight_600 text-start">
                 Project-4
               </p>
-              <div className="card_bottom_buttons d-flex gap-3">
+              <div className="card_bottom_buttons d-flex gap-1">
                 <button className="bg-white px-2 px-xl-4 py-1 rounded-pill border-0 font_size_16">
                   UX/UI
                 </button>

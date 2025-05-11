@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function Icon_slide_right({ icon, begin, finish }) {
   useGSAP(() => {
-    const isLargeScreen = window.matchMedia("(min-width: 1024px)").matches;
+    const isLargeScreen = window.matchMedia("(min-width: 1600px)").matches;
     if (!isLargeScreen) return;
 
     gsap.to(icon, {
